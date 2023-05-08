@@ -21,13 +21,15 @@
             background-color: transparent;
             color: $azure;
             border: none;
+            font-size: 1rem;
             padding: .5rem 1rem;
+            cursor: pointer;
         }
 
         &--border {
             border: 1px solid $jade;
             border-radius: 20px;
-            transition: background-color 0.5s;
+            transition: background-color 0.3s;
 
             &:hover {
                 background-color: $jade;

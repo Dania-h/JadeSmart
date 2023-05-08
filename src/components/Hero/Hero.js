@@ -13,6 +13,7 @@ function Hero() {
                     <span>knowledge...</span>
                 </div>
             </div>
+            <button className='hero__button'>Get Started</button>
         </article>
     );
 }
