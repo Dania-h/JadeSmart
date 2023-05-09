@@ -1,13 +1,13 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-.mission {
+.focus {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: $azure;
-    color: $midnight-green;
+    background-color: $midnight-green;
+    color: $azure;
     padding: 1rem;
 
     & h2 {

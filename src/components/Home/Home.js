@@ -1,3 +1,4 @@
+import Focus from "../Focus/Focus";
 import Hero from "../Hero/Hero";
 import Mission from "../Mission/Mission";
 
@@ -7,6 +8,7 @@ function Home() {
         <>
             <Hero />
             <Mission />
+            <Focus />
         </>
     );
 }
