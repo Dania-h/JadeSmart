@@ -15,11 +15,28 @@
         margin: 1.5rem 0 1rem 0;
     }
 
-    &__img {
-        width: 100%;
+    &__top-img {
+        width: 20%;
+        margin: 1rem 0;
     }
 
     &__p {
+        font-size: .8125rem;
         margin-bottom: 2rem;
+    }
+
+    &__icon {
+        width: 1.5rem;
+    }
+
+    &__instructions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--single {
+            width: 50%;
+            margin: 1rem 0;
+        }
     }
 }
