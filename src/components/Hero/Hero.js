@@ -1,4 +1,5 @@
 import './Hero.scss';
+import { Link } from 'react-router-dom';
 
 function Hero() {
     return (
@@ -13,7 +14,9 @@ function Hero() {
                     <span>knowledge...</span>
                 </div>
             </div>
-            <button className='hero__button'>Get Started</button>
+            <Link to='/stocksim'>
+                <button className='hero__button'>Get Started</button>
+            </Link>
         </article>
     );
 }

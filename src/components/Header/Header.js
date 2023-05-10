@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
         <header className='header'>
-            <Link to="#">
+            <Link to="/">
                 <img className='header__logo' src={logo} alt='jade green gem' />
             </Link>
             <div className='header__links'>
                 <Link to="#">
-                    <button className='header__links--button'>Our Mission</button>
+                    <button className='header__links--button'>About Us</button>
                 </Link>
                 <Link to="#">
                     <button className='header__links--button header__links--border'>Login</button>
