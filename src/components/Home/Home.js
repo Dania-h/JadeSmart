@@ -1,5 +1,5 @@
 import Focus from "../Focus/Focus";
-import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 import Mission from "../Mission/Mission";
 
@@ -7,12 +7,13 @@ import Mission from "../Mission/Mission";
 function Home() {
     return (
         <>
+            <Header />
             <main>
                 <Hero />
                 <Mission />
                 <Focus />
             </main>
-            <Footer />
+
         </>
     );
 }

@@ -1,8 +1,11 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-.header {
+body {
     background-color: $prussian-blue;
+}
+
+.header {
     color: $azure;
     display: flex;
     justify-content: space-between;
