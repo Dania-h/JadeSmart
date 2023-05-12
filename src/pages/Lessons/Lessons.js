@@ -1,9 +1,9 @@
-import RoiCalculator from "../RoiCalculator/RoiCalculator";
+import StockChart from "../StockChart/StockChart";
 
 function Lessons() {
     return (
         <>
-            <RoiCalculator />
+            <StockChart />
         </>
     );
 }
