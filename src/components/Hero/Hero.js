@@ -14,7 +14,7 @@ function Hero() {
                     <span>knowledge...</span>
                 </div>
             </div>
-            <Link to='/stocksim'>
+            <Link to='/lessons'>
                 <button className='hero__button'>Get Started</button>
             </Link>
         </article>

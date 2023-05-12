@@ -2,7 +2,7 @@ import './App.scss';
 import Home from './components/Home/Home';
 import Footer from "./components/Footer/Footer";
 import { Routes, Route, Navigate } from 'react-router-dom';
-import RoiCalculator from './pages/RoiCalculator/RoiCalculator';
+import Lessons from './pages/Lessons/Lessons';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Navigate to='/' />} />
-        <Route path='/stocksim' element={<RoiCalculator />} />
+        <Route path='/lessons' element={<Lessons />} />
       </Routes>
       <Footer />
     </>
