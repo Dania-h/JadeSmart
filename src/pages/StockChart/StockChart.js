@@ -13,11 +13,11 @@ function StockChart() {
 
     //This axios call retrieves stock data from finnhub. Arguments needed are stock symbol, resolution (60, D, W, M), and timeframe in unix
     useEffect(() => {
-        axios.get(`${baseUrl}stock/candle?symbol=AAPL&resolution=M&from=1526083200&to=${dayjs().unix()}&token=${API_key}`)
+        axios.get(`${baseUrl}stock/candle?symbol=AAPL&resolution=M&from=1527811200&to=${dayjs().unix()}&token=${API_key}`)
             .then(response => {
-                const formattedData = response.data.c.map((value, index) => ({
+                const formattedData = response.data.c.map((value, index) => ({ //iterates through the "c" object in the response
                     c: value,
-                    t: dayjs.unix(response.data.t[index]).format('MM/YYYY'),
+                    t: dayjs.unix(response.data.t[index]).format('MM/YYYY'), //formatting the date from the "t" response
                 }));
 
                 setStockData(formattedData);
@@ -27,28 +27,8 @@ function StockChart() {
             });
     }, [baseUrl, API_key]);
 
-    console.log(stockData);
-
-    // convertedDate(stockData);
-
-    // const data = [
-    //     {
-    //         date: dayjs.unix(1680480000).format('MM/DD'),
-    //         price: 4000,
-    //     },
-    //     {
-    //         date: dayjs.unix(1680566400).format('MM/DD'),
-    //         price: 3000,
-    //     },
-    //     {
-    //         date: dayjs.unix(1680652800).format('MM/DD'),
-    //         price: 2000,
-    //     },
-    // ];
-
     return (
-        <main className='stocks'>
-            <div className='stocks__chart'>
+            <div className='chart'>
                 <ResponsiveContainer>
                     <LineChart
                         width={500}
@@ -71,7 +51,6 @@ function StockChart() {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-        </main>
     );
 }
 

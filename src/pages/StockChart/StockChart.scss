@@ -1,13 +1,8 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-.stocks {
-    color: $azure;
-
-    &__chart {
-        background-color: $prussian-blue;
-        font-size: .625rem;
-        width: 100%;
-        height: 60vh;
-    }
+.chart {
+    font-size: .625rem;
+    width: 100%;
+    height: 60vh;
 }
