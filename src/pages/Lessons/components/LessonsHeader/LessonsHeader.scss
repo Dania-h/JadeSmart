@@ -1,0 +1,41 @@
+@use '../../../../styles/partials/mixins' as *;
+@use '../../../../styles/partials/variables' as *;
+
+.header {
+    color: $azure;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    &__links {
+        display: flex;
+        text-decoration: none;
+        color: $azure;
+
+        & h2 {
+            font-weight: 400;
+            margin: 0 1rem;
+        }
+    }
+
+    &__logo {
+        height: 24px;
+        margin-left: 1rem;
+    }
+
+    &__button {
+        background-color: transparent;
+        color: $azure;
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        border: 1px solid $jade;
+        border-radius: 20px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $jade;
+        }
+    }
+}
