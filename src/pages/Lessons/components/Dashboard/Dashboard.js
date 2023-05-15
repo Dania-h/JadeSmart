@@ -1,6 +1,7 @@
 import './Dashboard.scss';
 import user from '../../../../assets/images/user.png';
 import tracker from '../../../../assets/icons/tracker.svg';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
     return (
@@ -35,10 +36,12 @@ function Dashboard() {
                             <img className='courses__tracker' src={tracker} alt='tracking circle' />
                             <button>Investment planning</button>
                         </div>
-                        <div className='courses__lesson'>
-                            <img className='courses__tracker' src={tracker} alt='tracking circle' />
-                            <button>Interpreting stock information</button>
-                        </div>
+                        <Link to="/lessons/3">
+                            <div className='courses__lesson'>
+                                <img className='courses__tracker' src={tracker} alt='tracking circle' />
+                                <button>Interpreting stock information</button>
+                            </div>
+                        </Link>
                         <div className='courses__lesson'>
                             <img className='courses__tracker' src={tracker} alt='tracking circle' />
                             <button>Returns calculator</button>

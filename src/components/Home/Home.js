@@ -1,15 +1,13 @@
 import Focus from "../Focus/Focus";
-import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 import Mission from "../Mission/Mission";
 
 
-function Home() {
+function Home({ setNewHeader }) {
     return (
         <>
-            <Header />
             <main>
-                <Hero />
+                <Hero setNewHeader={setNewHeader} />
                 <Mission />
                 <Focus />
             </main>

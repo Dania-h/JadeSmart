@@ -55,6 +55,11 @@
         &--active {
             background-color: $jade;
             color: $prussian-blue;
+
+            &:hover {
+                background-color: $prussian-blue;
+                color: $azure;
+            }
         }
     }
 
@@ -85,11 +90,16 @@
             border: none;
             color: $azure;
             font-size: 1rem;
+            cursor: pointer;
         }
 
         &:hover {
             background-color: rgba($color: $jade, $alpha: 0.5);
         }
+    }
+
+    & a {
+        text-decoration: none;
     }
 
     &__tracker {

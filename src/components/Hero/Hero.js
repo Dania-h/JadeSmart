@@ -1,7 +1,7 @@
 import './Hero.scss';
 import { Link } from 'react-router-dom';
 
-function Hero() {
+function Hero({ setNewHeader }) {
     return (
         <article className='hero'>
             <h1>JadeSmart</h1>
@@ -15,7 +15,7 @@ function Hero() {
                 </div>
             </div>
             <Link to='/lessons'>
-                <button className='hero__button'>Get Started</button>
+                <button onClick={() => setNewHeader(true)} className='hero__button'>Get Started</button>
             </Link>
         </article>
     );

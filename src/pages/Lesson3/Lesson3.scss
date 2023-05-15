@@ -1,0 +1,10 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.lesson {
+    color: $azure;
+
+    &__icon {
+        width: 1.5rem;
+    }
+}
