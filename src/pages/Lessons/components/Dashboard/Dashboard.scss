@@ -1,0 +1,98 @@
+@use '../../../../styles/partials/mixins' as *;
+@use '../../../../styles/partials/variables' as *;
+
+.dashboard {
+    color: $azure;
+    padding: 1rem;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+
+    &__picture {
+        width: 2.8125rem;
+        height: 2.8125rem;
+    }
+
+    &__info {
+        margin: 0 1rem;
+
+        & h1 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+
+        & p {
+            font-size: .8125rem;
+        }
+    }
+}
+
+.courses {
+
+    & h2 {
+        font-weight: 500;
+        margin: 1.5rem 0 1rem 0;
+    }
+
+    &__button {
+        background-color: transparent;
+        color: $azure;
+        border: 1px solid $jade;
+        border-radius: 20px;
+        font-size: .8125rem;
+        font-weight: 500;
+        padding: .5rem 1.5rem;
+        margin: .5rem 1rem .5rem 0;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $midnight-green;
+        }
+
+        &--active {
+            background-color: $jade;
+            color: $prussian-blue;
+        }
+    }
+
+    &__container {
+        background-color: $midnight-green;
+        border-radius: 20px;
+        overflow: hidden;
+        padding-bottom: 1rem;
+    }
+
+    &__course-title {
+        background-color: rgba($color: $azure, $alpha: 0.5);
+        padding: 0.5rem 1rem;
+    }
+
+    & h3 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    &__lesson {
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s;
+
+        & button {
+            background-color: transparent;
+            border: none;
+            color: $azure;
+            font-size: 1rem;
+        }
+
+        &:hover {
+            background-color: rgba($color: $jade, $alpha: 0.5);
+        }
+    }
+
+    &__tracker {
+        height: 3.75rem;
+    }
+}
