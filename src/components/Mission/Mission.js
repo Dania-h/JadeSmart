@@ -11,7 +11,7 @@ function Mission() {
     });
 
     return (
-        <section className='mission'>
+        <section id='mission' className='mission'>
             <img className='mission__img' data-aos='fade-up' src={coinman} alt='man reading atop large coins' />
             <div>
                 <h2 data-aos='fade-up' data-aos-delay='200'>STEPPING TOWARD FINANCIAL ACCESSIBILITY</h2>
