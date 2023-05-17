@@ -10,6 +10,7 @@ import Lesson2 from './pages/Lesson2/Lesson2';
 import Lesson1 from './pages/Lesson1/Lesson1';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
+import Lesson4 from './pages/Lesson4/Lesson4';
 
 function App() {
   const [newHeader, setNewHeader] = useState(false);
@@ -29,6 +30,7 @@ function App() {
           <Route path='/lessons/2' element={<Lesson2 />} />
           <Route path="/lessons/3" element={<Lesson3 />} />
           <Route path='/lessons/3/quiz' element={<Lesson3Quiz />} />
+          <Route path='/lessons/4' element={<Lesson4 />} />
         </Routes>
       </main>
       <Footer />

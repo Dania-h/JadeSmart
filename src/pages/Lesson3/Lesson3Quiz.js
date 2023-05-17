@@ -94,7 +94,6 @@ function Lesson3Quiz() {
                 </Link>
                 <div>
                     <h1>Time to practice!</h1>
-                    <p>Use the following chart to answer the questions:</p>
                 </div>
             </div>
             <div className='quiz--margins'>
@@ -113,14 +112,14 @@ function Lesson3Quiz() {
                         data={stockData}
                         margin={{
                             top: 5,
-                            right: 5,
-                            left: 5,
+                            right: 0,
+                            left: -30,
                             bottom: 5,
                         }}
                     >
                         <CartesianGrid strokeDasharray="4" opacity={0.1} />
                         <XAxis dataKey="t" stroke='#EDF7F6' opacity={0.5} tickLine={false} />
-                        <YAxis stroke='#EDF7F6' hide={true} domain={[100, 120]} />
+                        <YAxis stroke='#EDF7F6' opacity={0.5} tickLine={false} domain={[100, 120]} />
                         <Tooltip
                             labelStyle={{ color: '#EDF7F6' }}
                             contentStyle={{ backgroundColor: '#122535', borderRadius: "20px" }} />
@@ -128,6 +127,7 @@ function Lesson3Quiz() {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
+            <p>Use the chart provided to answer the questions:</p>
             <div className='quiz__container'>
                 <h3>{questions[currentQuestion].text}</h3>
                 <ul>

@@ -46,10 +46,12 @@ function Dashboard() {
                                 <button>Interpreting stock information</button>
                             </div>
                         </Link>
-                        <div className='courses__lesson'>
-                            <img className='courses__tracker' src={tracker} alt='tracking circle' />
-                            <button>Returns calculator</button>
-                        </div>
+                        <Link to="/lessons/4">
+                            <div className='courses__lesson'>
+                                <img className='courses__tracker' src={tracker} alt='tracking circle' />
+                                <button>Returns calculator</button>
+                            </div>
+                        </Link>
                     </div>
                 </section>
             </article>
