@@ -28,14 +28,18 @@ function Dashboard() {
                         <div className='courses__course-title'>
                             <h3>INTRO TO INVESTING</h3>
                         </div>
-                        <div className='courses__lesson'>
-                            <img className='courses__tracker' src={tracker} alt='tracking circle' />
-                            <button>Stocks and the stock market</button>
-                        </div>
-                        <div className='courses__lesson'>
-                            <img className='courses__tracker' src={tracker} alt='tracking circle' />
-                            <button>Investment planning</button>
-                        </div>
+                        <Link to="/lessons/1">
+                            <div className='courses__lesson'>
+                                <img className='courses__tracker' src={tracker} alt='tracking circle' />
+                                <button>Stocks and the stock market</button>
+                            </div>
+                        </Link>
+                        <Link to="/lessons/2">
+                            <div className='courses__lesson'>
+                                <img className='courses__tracker' src={tracker} alt='tracking circle' />
+                                <button>Investment planning</button>
+                            </div>
+                        </Link>
                         <Link to="/lessons/3">
                             <div className='courses__lesson'>
                                 <img className='courses__tracker' src={tracker} alt='tracking circle' />
