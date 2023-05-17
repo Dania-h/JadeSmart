@@ -1,6 +1,5 @@
 import './Lesson3Quiz.scss';
 import back from '../../assets/icons/arrow-back.svg';
-import 'dayjs/locale/en';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
@@ -34,6 +33,11 @@ function Lesson3Quiz() {
             });
     }, [baseUrl, API_key]);
 
+    //Targeting the latest (last) data from the array provided by the axios call
+    const lastData = stockData?.slice(-1)[0];
+    const lastPrice = lastData?.c;
+    const lastDate = dayjs(lastData?.t).format('MMM DD');
+
     return (
         <section className='quiz'>
             <div className='quiz__head-div'>
@@ -50,8 +54,8 @@ function Lesson3Quiz() {
                 <p className='quiz--gray'>AMZN</p>
             </div>
             <div className='quiz--margins'>
-                <p className='quiz--price'>114.90 <span className='quiz--gray'>USD</span></p>
-                <p>May</p>
+                <p className='quiz--price'>{lastPrice} <span className='quiz--gray'>USD</span></p>
+                <p>{lastDate}</p>
             </div>
             <div className='chart'>
                 <ResponsiveContainer>
