@@ -39,6 +39,9 @@ function Lesson3Quiz() {
     const lastPrice = lastData?.c;
     const lastDate = dayjs(lastData?.t).format('MMM DD');
 
+    //created for one of the quiz questions
+    const previousClose = stockData?.slice(-2)[0];
+
     //Creating a small array with objects for the quiz
     const questions = [
         {
@@ -49,6 +52,23 @@ function Lesson3Quiz() {
                 { id: 2, answer: `$${lastPrice}`, isCorrect: true },
             ],
         },
+        {
+            text: "What was the previous day's close price?",
+            options: [
+                { id: 0, answer: `$${previousClose?.c}`, isCorrect: true },
+                { id: 1, answer: `$${lastPrice}`, isCorrect: false },
+                { id: 2, answer: '$111.20', isCorrect: false },
+            ],
+        },
+        {
+            text: "This month's high and low were what price, respectively?",
+            options: [
+                { id: 0, answer: '$112.18 / $103.63', isCorrect: false },
+                { id: 1, answer: `$${lastPrice} / $103.63`, isCorrect: true },
+                { id: 2, answer: `$${lastPrice} / $110.26`, isCorrect: false },
+            ],
+        },
+
     ]
 
     //Click handler when user chooses an option
