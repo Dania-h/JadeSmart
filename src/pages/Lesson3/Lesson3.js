@@ -1,7 +1,7 @@
 import './Lesson3.scss';
-import StockChart from '../StockChart/StockChart';
 import infographic from '../../assets/images/Apple-stock-chart-770x576.png';
 import back from '../../assets/icons/arrow-back.svg';
+import next from '../../assets/icons/chevron_right_FILL0_wght400_GRAD0_opsz48.svg';
 import { Link } from 'react-router-dom';
 
 function Lesson3() {
@@ -37,6 +37,14 @@ function Lesson3() {
                     <span>"52-week high" and "low"</span> - the highest and lowest price the stock traded for in the previous 52 weeks.
                 </li>
             </ul>
+            <div className='lesson__button-div'>
+                <Link to='/lessons/3/quiz'>
+                    <button className='lesson__next-button'>
+                        Next
+                        <img className='lesson__next-button--icon' src={next} alt='next arrow' />
+                    </button>
+                </Link>
+            </div>
         </article>
     );
 }

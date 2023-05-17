@@ -7,6 +7,7 @@ import LessonsHeader from './pages/Lessons/components/LessonsHeader/LessonsHeade
 import Dashboard from './pages/Lessons/components/Dashboard/Dashboard';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
+import Lesson3Quiz from './pages/Lesson3/Lesson3Quiz';
 
 function App() {
   const [newHeader, setNewHeader] = useState(false);
@@ -23,6 +24,7 @@ function App() {
           <Route path='/home' element={<Navigate to='/' />} />
           <Route path='/lessons' element={<Dashboard />} />
           <Route path="/lessons/3" element={<Lesson3 />} />
+          <Route path='/lessons/3/quiz' element={<Lesson3Quiz />} />
         </Routes>
       </main>
       <Footer />
