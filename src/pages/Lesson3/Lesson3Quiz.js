@@ -13,6 +13,7 @@ dayjs.extend(timezone);
 
 function Lesson3Quiz() {
     const [stockData, setStockData] = useState([]);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
 
     const API_key = process.env.REACT_APP_API_key; //my api key present in env
     const baseUrl = 'https://finnhub.io/api/v1/'
@@ -37,6 +38,33 @@ function Lesson3Quiz() {
     const lastData = stockData?.slice(-1)[0];
     const lastPrice = lastData?.c;
     const lastDate = dayjs(lastData?.t).format('MMM DD');
+
+    //Creating a small array with objects for the quiz
+    const questions = [
+        {
+            text: "What is the current share price?",
+            options: [
+                { id: 0, answer: '$113.4', isCorrect: false },
+                { id: 1, answer: '$05.17', isCorrect: false },
+                { id: 2, answer: `$${lastPrice}`, isCorrect: true },
+            ],
+        },
+    ]
+
+    //Click handler when user chooses an option
+    const answerClick = (isCorrect) => {
+        if (isCorrect) {
+            alert('Correct!');
+            if (currentQuestion + 1 < questions.length) {
+                setCurrentQuestion(currentQuestion + 1);
+            } else {
+                const showButton = document.querySelector('.hide');
+                showButton.classList.remove('hide');
+            }
+        } else {
+            alert('Try again...');
+        }
+    }
 
     return (
         <section className='quiz'>
@@ -79,6 +107,19 @@ function Lesson3Quiz() {
                         <Line dataKey="c" stroke="#01B36C" dot={false} />
                     </LineChart>
                 </ResponsiveContainer>
+            </div>
+            <div className='quiz__container'>
+                <h3>{questions[currentQuestion].text}</h3>
+                <ul>
+                    {questions[currentQuestion].options.map((option) => {
+                        return (
+                            <li onClick={() => answerClick(option.isCorrect)} key={option.id}>{option.answer}</li>
+                        );
+                    })}
+                </ul>
+                <Link to='/lessons'>
+                    <button className='hide quiz__finish'>FINISH</button>
+                </Link>
             </div>
         </section>
     );

@@ -30,6 +30,52 @@
         color: rgba($color: $azure, $alpha: 0.5);
         font-size: .8125rem;
     }
+
+    &__container {
+        background-color: $midnight-green;
+        text-align: center;
+        border-radius: 20px;
+        padding: 1rem;
+        margin: 1rem 0;
+
+        & h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        & ul {
+            padding: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        & li {
+            list-style: none;
+            padding: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: rgba($color: $jade, $alpha: 0.5)
+            }
+        }
+    }
+
+    &__finish {
+        @include green-button;
+        width: 50%;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $prussian-blue;
+            color: $azure;
+            border: 1px solid $jade;
+        }
+    }
+}
+
+.hide {
+    display: none;
 }
 
 .chart {

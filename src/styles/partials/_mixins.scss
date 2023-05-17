@@ -15,7 +15,7 @@
   @mixin green-button {
     background-color: $jade;
     color: $prussian-blue;
-    border: none;
+    border: 1px solid $jade;
     padding: 1rem;
     cursor: pointer;
     border-radius: 20px;
