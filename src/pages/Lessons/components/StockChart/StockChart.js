@@ -5,27 +5,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { useState, useEffect } from 'react';
 
 
-function StockChart() {
-    const [stockData, setStockData] = useState([]);
-
-    const API_key = process.env.REACT_APP_API_key; //my api key present in env
-    const baseUrl = 'https://finnhub.io/api/v1/'
-
-    //This axios call retrieves stock data from finnhub. Arguments needed are stock symbol, resolution (60, D, W, M), and timeframe in unix
-    useEffect(() => {
-        axios.get(`${baseUrl}stock/candle?symbol=AAPL&resolution=M&from=1527811200&to=${dayjs().unix()}&token=${API_key}`)
-            .then(response => {
-                const formattedData = response.data.c.map((value, index) => ({ //iterates through the "c" object in the response
-                    c: value,
-                    t: dayjs.unix(response.data.t[index]).format('MM/YYYY'), //formatting the date from the "t" response
-                }));
-
-                setStockData(formattedData);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }, [baseUrl, API_key]);
+function StockChart({ stockData }) {
 
     return (
             <div className='chart'>
